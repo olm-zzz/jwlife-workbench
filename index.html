@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0" />
+<title>大乐透happy life</title>
+<meta name="description" content="衣橱搭配、囤货管理、赏味期限、旅行点亮、周末日历、节日提醒、健康打卡、生活备忘、行李清单、宠物成长、恋爱记录、愿望清单、药品记录，13 个模块把日常安排得明明白白" />
+<meta name="theme-color" content="#e8607d" />
+<meta name="format-detection" content="telephone=no" />
+
+<!-- PWA：可安装到手机桌面，全屏独立窗口打开 -->
+<link rel="manifest" href="manifest.webmanifest" />
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png" />
+<link rel="apple-touch-icon" href="icons/icon-512.png" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="大乐透happy life" />
+<meta name="application-name" content="大乐透happy life" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">乐</span>
+        <div class="brand-txt">
+          <div class="brand-t">大乐透happy life</div>
+          <div class="brand-s">把日常安排得明明白白</div>
+        </div>
+      </div>
+      <nav class="nav" id="nav"></nav>
+      <div class="side-foot">
+        <button class="btn ghost sm block" id="theme-btn">切换夜间模式</button>
+        <div class="side-tip">数据保存在本机浏览器</div>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="page" id="page"></div>
+    </main>
+  </div>
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root"></div>
+
+  <script src="js/lunar.js"></script>
+  <script src="js/core.js"></script>
+  <script src="js/mod-wardrobe.js"></script>
+  <script src="js/mod-supplies.js"></script>
+  <script src="js/mod-travel.js"></script>
+  <script src="js/mod-festival.js"></script>
+  <script src="js/mod-health.js"></script>
+  <script src="js/mod-notes.js"></script>
+  <script src="js/mod-love.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    // 注册 Service Worker：装到桌面后断网也能打开
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () { });
+      });
+    }
+  </script>
+</body>
+</html>

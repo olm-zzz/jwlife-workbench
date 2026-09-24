@@ -1,0 +1,48 @@
+{
+  "name": "大乐透happy life",
+  "short_name": "大乐透happy life",
+  "description": "衣橱 · 囤货 · 赏味期限 · 旅行 · 周末 · 节日 · 健康 · 备忘 · 行李 · 宠物 · 恋爱 · 愿望 · 药品，13 个模块把日常安排得明明白白",
+  "lang": "zh-CN",
+  "dir": "ltr",
+  "start_url": "./index.html",
+  "scope": "./",
+  "id": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui", "browser"],
+  "orientation": "any",
+  "background_color": "#fff7f9",
+  "theme_color": "#e8607d",
+  "categories": ["lifestyle", "productivity"],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    { "name": "首页概览", "url": "./index.html#/home" },
+    { "name": "电子衣橱", "url": "./index.html#/wardrobe" },
+    { "name": "赏味期限", "url": "./index.html#/expiry" },
+    { "name": "恋爱记录", "url": "./index.html#/love" }
+  ]
+}
